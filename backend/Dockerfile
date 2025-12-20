@@ -13,6 +13,4 @@ RUN  pip install --upgrade pip --no-cache-dir && pip install -r requirements.txt
 
 COPY . .
 
-COPY static_backend/. /static_backend/static/ 
-
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi"]
